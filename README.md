@@ -13,7 +13,7 @@ pip install sochugc
 ```python
 from sochugc import UGC
 
-# the endpoint defaults to https://ugc.kulturarvsdata.se/
+# the endpoint defaults to http://ugc.kulturarvsdata.se/
 ugc = UGC('<API-KEY>', endpoint='http://lx-ra-ugchubtest:8080/')
 
 # get the total number of user generated items
