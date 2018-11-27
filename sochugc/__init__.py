@@ -108,6 +108,9 @@ class UGC:
         if target.startswith('https://en.wikipedia.org/wiki/'):
             return True
 
+        if target.startswith('https://de.wikipedia.org/wiki/'):
+            return True
+
         if target.startswith('http://data.europeana.eu/item/'):
             return True
 
