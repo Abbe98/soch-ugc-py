@@ -10,4 +10,4 @@ ksamsok = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.4"
+python_version = "3"
