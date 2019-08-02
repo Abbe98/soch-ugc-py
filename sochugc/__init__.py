@@ -83,7 +83,6 @@ class UGC:
             raise ValueError('{} is not a valid target.'.format(target))
 
         url = '{}api?x-api={}&method=insert&scope=relationAll&objectUri={}&user={}&relationType={}&relatedTo={}&format=json'.format(self.endpoint, self.key, kulturarvsdata_uri, user, relation, target)
-        print(url)
         data = self.make_get_request(url)
 
         if data['response']['result'] == 'SUCCESS':
