@@ -13,7 +13,7 @@ setup(
   name = 'sochugc',
   packages = find_packages(),
   install_requires=['requests', 'ksamsok'],
-  python_requires='>=3.4.0',
+  python_requires='>=3.5.0',
   version = version,
   description = 'API library for the cultural heritage K-Samsök (SOCH) UGC API.',
   long_description=long_description,
