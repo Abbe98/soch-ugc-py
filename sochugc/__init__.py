@@ -1,3 +1,5 @@
+import re
+
 import requests
 from ksamsok import KSamsok
 
@@ -103,16 +105,10 @@ class UGC:
         if target.startswith('http://www.wikidata.org/entity/Q'):
             return True
 
-        if target.startswith('https://sv.wikipedia.org/wiki/'):
-            return True
-
-        if target.startswith('https://en.wikipedia.org/wiki/'):
-            return True
-
-        if target.startswith('https://de.wikipedia.org/wiki/'):
-            return True
-
         if target.startswith('http://data.europeana.eu/item/'):
+            return True
+
+        if re.match(r'^https:\/\/\w{2}\.wikipedia\.org\/wiki\/.+', target):
             return True
 
         return False
