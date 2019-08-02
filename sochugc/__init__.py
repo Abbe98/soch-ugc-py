@@ -70,7 +70,8 @@ class UGC:
         return False
 
     def create_item_relation(self, kulturarvsdata_uri, relation, target, user):
-        if not self.soch.formatUri(kulturarvsdata_uri, 'rawurl'):
+        kulturarvsdata_uri = self.soch.formatUri(kulturarvsdata_uri, 'rawurl')
+        if not kulturarvsdata_uri:
             raise ValueError('{} is not an valid Kulturarvsdata URI.'.format(kulturarvsdata_uri))
 
         if relation not in self.relation_types:
