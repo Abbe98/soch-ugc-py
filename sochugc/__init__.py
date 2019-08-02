@@ -108,6 +108,9 @@ class UGC:
         if target.startswith('http://data.europeana.eu/item/'):
             return True
 
+        if re.match(r'^https:\/\/libris\.kb\.se\/.{14,17}$', target):
+            return True
+
         if re.match(r'^https:\/\/\w{2}\.wikipedia\.org\/wiki\/.+', target):
             return True
 
