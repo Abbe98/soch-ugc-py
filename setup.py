@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 from os import path
 
-version = '1.1.0'
+version = '1.2.0'
 repo = 'soch-ugc-py'
 
 this_directory = path.abspath(path.dirname(__file__))
@@ -13,7 +13,7 @@ setup(
   name = 'sochugc',
   packages = find_packages(),
   install_requires=['requests', 'ksamsok'],
-  python_requires='>=3.4.0',
+  python_requires='>=3.5.0',
   version = version,
   description = 'API library for the cultural heritage K-Samsök (SOCH) UGC API.',
   long_description=long_description,
@@ -28,7 +28,6 @@ setup(
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3 :: Only',
