@@ -73,7 +73,7 @@ class UGC:
             return True
         return False
 
-    def create_item_relation(self, kulturarvsdata_uri: str, relation: str, target: str, user: str) -> bool:
+    def create_item_relation(self, kulturarvsdata_uri: str, relation: str, target: str, user: str, comment: str = None) -> bool:
         kulturarvsdata_uri = self.soch.formatUri(kulturarvsdata_uri, 'rawurl')
         if not kulturarvsdata_uri:
             raise ValueError('{} is not an valid Kulturarvsdata URI.'.format(kulturarvsdata_uri))
@@ -88,6 +88,10 @@ class UGC:
             raise ValueError('This action requires an API key.')
 
         url = '{}api?x-api={}&method=insert&scope=relationAll&objectUri={}&user={}&relationType={}&relatedTo={}&format=json'.format(self.endpoint, self.key, kulturarvsdata_uri, user, relation, target)
+
+        if comment:
+            url = '{}&comment={}'.format(url, comment)
+
         data = self.make_get_request(url)
 
         if data['response']['result'] == 'SUCCESS':
