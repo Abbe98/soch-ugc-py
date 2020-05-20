@@ -109,7 +109,22 @@ class UGC:
         if target.startswith('http://www.wikidata.org/entity/Q'):
             return True
 
-        if target.startswith('http://data.europeana.eu/item/'):
+        if target.startswith('http://commons.wikimedia.org/entity/M'):
+            return True
+
+        if target.startswith('http://kulturnav.org/'):
+            return True
+
+        if target.startswith('http://viaf.org/viaf/'):
+            return True
+
+        if target.startswith('http://vocab.getty.edu/ulan/'):
+            return True
+
+        if target.startswith('http://iconclass.org/'):
+            return True
+
+        if target.startswith('http://data.europeana.eu/'):
             return True
 
         if re.match(r'^https:\/\/libris\.kb\.se\/.{14,17}$', target):
