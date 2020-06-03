@@ -19,6 +19,7 @@ class UGC:
         self.relation_types = list([
             'sameAs',
             'isDescribedBy',
+            'describes',
             'visualizes',
             'hasPart',
             'isPartOf',
